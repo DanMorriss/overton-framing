@@ -1,20 +1,30 @@
 import amanda from "../../assets/images/amanda2.jpg";
+import { FramedImage } from "./meet-amanda.styles";
+
+import useWindowSize from "../../hooks/useWindowSize";
 
 const MeetAmanda = () => {
+  const { width } = useWindowSize();
+  const isMobile = width < 768;
+
   return (
     <>
       <h2 className="text-center text-3xl p-10">
         Meet Amanda, the framing expert
       </h2>
-      <div className="flex flex-row-reverse m-10">
-        <img
-          src={amanda}
-          alt="Amanda framing artwork"
-          width="500"
-          height="500"
-          className="shadow-xl"
-        />
-        <div className="p-10">
+      <div
+        className={`flex ${
+          isMobile ? "flex-col" : "flex-row-reverse"
+        } m-10 mb-40`}
+      >
+        <div className={isMobile ? "w-full" : "w-1/2"}>
+          <FramedImage
+            src={amanda}
+            alt="Amanda framing artwork"
+            className="shadow-xl"
+          />
+        </div>
+        <div className={isMobile ? "w-full p-10" : "w-1/2 pr-10"}>
           <p className="mb-5">
             Amanda is a distinguished frame maker based in Marlborough, bringing
             over 15 years of expertise to her craft. Her dedication to providing

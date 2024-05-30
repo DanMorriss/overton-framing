@@ -26,20 +26,19 @@ const FramingProcess = () => {
 
   return (
     <>
-      <VerticalTimeline lineColor={"#3e497a"}>
+      <VerticalTimeline lineColor={"#ec478c"}>
         {framingProcessSteps.map(({ title, content }, index) => (
           <VerticalTimelineElement
             className=""
             contentStyle={{
               background: "",
               color: "",
-              // border: "1px solid #3e497a",
               boxShadow:
                 "0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)",
             }}
             contentArrowStyle={{ borderRight: "7px solid  #fff" }}
             iconStyle={{
-              background: "rgb(33, 150, 243)",
+              background: "#01aaa9",
               color: "#fff",
               display: "flex",
               justifyContent: "center",
