@@ -17,14 +17,16 @@ const MeetAmanda = () => {
           isMobile ? "flex-col" : "flex-row-reverse"
         } m-10 mb-40`}
       >
-        <div className={isMobile ? "w-full" : "w-1/2"}>
+        <div className={isMobile ? "flex justify-center" : "w-1/2"}>
           <FramedImage
             src={amanda}
             alt="Amanda framing artwork"
             className="shadow-xl"
           />
         </div>
-        <div className={isMobile ? "w-full p-10" : "w-1/2 pr-10"}>
+        <div
+          className={`${isMobile ? "w-full p-10" : "w-1/2 pr-10"} text-justify`}
+        >
           <p className="mb-5">
             Amanda is a distinguished frame maker based in Marlborough, bringing
             over 15 years of expertise to her craft. Her dedication to providing
