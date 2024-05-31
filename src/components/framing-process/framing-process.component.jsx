@@ -45,6 +45,7 @@ const FramingProcess = () => {
       <VerticalTimeline lineColor={"#ec478c"}>
         {framingProcessSteps.map(({ title, content }, index) => (
           <VerticalTimelineElement
+            key={index}
             className=""
             contentStyle={{
               background: "",
@@ -60,7 +61,7 @@ const FramingProcess = () => {
               justifyContent: "center",
               alignItems: "center",
             }}
-            icon={<i class="fa-solid fa-palette"></i>}
+            icon={<i className="fa-solid fa-palette"></i>}
           >
             <h3 className="font-bold text-xl">{title}</h3>
             <p>{content}</p>

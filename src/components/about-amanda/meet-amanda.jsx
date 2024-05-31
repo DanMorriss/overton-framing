@@ -1,3 +1,7 @@
+import { useRef } from "react";
+
+import { useInView } from "framer-motion";
+
 import amanda from "../../assets/images/amanda2.jpg";
 import { FramedImage } from "./meet-amanda.styles";
 
@@ -7,9 +11,20 @@ const MeetAmanda = () => {
   const { width } = useWindowSize();
   const isMobile = width < 768;
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <>
-      <h2 className="text-center text-3xl p-10">
+      <h2
+        className="text-center text-3xl p-10"
+        ref={ref}
+        style={{
+          transform: isInView ? "none" : "translateY(-60px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
+      >
         Meet Amanda, the framing expert
       </h2>
       <div
@@ -22,10 +37,22 @@ const MeetAmanda = () => {
             src={amanda}
             alt="Amanda framing artwork"
             className="shadow-xl"
+            ref={ref}
+            style={{
+              transform: isInView ? "none" : "translateX(200px)",
+              opacity: isInView ? 1 : 0,
+              transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            }}
           />
         </div>
         <div
           className={`${isMobile ? "w-full p-10" : "w-1/2 pr-10"} text-justify`}
+          ref={ref}
+          style={{
+            transform: isInView ? "none" : "translateX(-200px)",
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          }}
         >
           <p className="mb-5">
             Amanda is a distinguished frame maker based in Marlborough, bringing

@@ -1,4 +1,4 @@
-// import { Button } from "@mui/material";
+import { motion } from "framer-motion";
 import Button from "../button/button.component";
 import frame from "../../assets/images/frame1.png";
 import frame2 from "../../assets/images/frame2.png";
@@ -17,7 +17,7 @@ const Hero = () => {
         alt="Frame"
         width="500"
         height="1080"
-        className="absolute slide-in-bck-tl shadow-xl"
+        className="absolute slide-in-tr shadow-xl"
       />
       <img
         src={frame}
@@ -36,7 +36,7 @@ const Hero = () => {
             Bespoke framing with over 15 years experience
           </h2>
         </OvertonFramingTitleSign>
-        <Button variant="contained" className="place-self-center mt-10">
+        <Button className="place-self-center mt-10">
           Book a free consultation
         </Button>
       </div>
