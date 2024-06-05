@@ -12,13 +12,13 @@ import {
 const Hero = () => {
   return (
     <HeroContainer className="h-screen">
-      <RightFrame
+      {/* <RightFrame
         src={frame2}
         alt="Frame"
         width="500"
         height="1080"
         className="absolute slide-in-tr shadow-xl"
-      />
+      /> */}
       <img
         src={frame}
         alt="Frame"
