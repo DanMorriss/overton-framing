@@ -18,6 +18,7 @@ export const BaseButton = styled.button`
   justify-content: center;
   border-radius: 25px;
   transition: all 0.4s ease-in-out;
+  box-shadow: inset 0 0 0 3px #01aaa9, inset 0 0 0 5px white;
 
   &:hover {
     background-color: white;
