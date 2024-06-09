@@ -4,6 +4,7 @@ import MeetAmanda from "./components/about-amanda/meet-amanda";
 import FramingProcess from "./components/framing-process/framing-process.component";
 import Testimonials from "./components/testimonials/testimonials.component";
 import Examples from "./components/examples/examples.component";
+import Contact from "./components/contact/contact.component";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <FramingProcess />
       <Testimonials />
       <Examples />
+      <Contact />
     </div>
   );
 }
