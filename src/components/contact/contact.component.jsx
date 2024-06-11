@@ -1,6 +1,10 @@
-import FormInput from "../form-input/form-input.component";
-import Button from "../button/button.component";
 import { useState } from "react";
+
+import { FormInput, FormTextArea } from "../form-input/form-input.component";
+import Button from "../button/button.component";
+import SectionHeading from "../section-heading/section-heading.component.jsx";
+
+import { ContactContainer } from "./contact.styles.jsx";
 
 const defaultFormFields = {
   name: "",
@@ -19,9 +23,9 @@ const Contact = () => {
   };
 
   return (
-    <div>
-      <h2>Book a free consultation</h2>
-      <div className="contact-form">
+    <ContactContainer>
+      <SectionHeading line1="Get in touch" line2="BOOK A FREE CONSULTATION" />
+      <div className="grid grid-cols-2 gap-4 w-full p-10">
         <form>
           <FormInput
             label="Name"
@@ -39,20 +43,23 @@ const Contact = () => {
             name="email"
             value={email}
           />
-          <FormInput
+          <FormTextArea
             label="Message"
             type="text"
+            max="120"
             required
             onChange={handleChange}
             name="message"
             value={message}
+            className="message-input"
           />
           <Button type="submit" onClick={handleSubmit}>
             Submit
           </Button>
         </form>
+        <div className="w-full bg-slate-400 rounded-lg"></div>
       </div>
-    </div>
+    </ContactContainer>
   );
 };
 

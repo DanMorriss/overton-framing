@@ -3,9 +3,14 @@ import { useRef } from "react";
 import { useInView } from "framer-motion";
 
 import amanda from "../../assets/images/amanda2.jpg";
-import { FramedImage, FramingExpertTitle } from "./meet-amanda.styles";
+import {
+  MeetAmandaContainer,
+  FramedImage,
+  FramingExpertTitle,
+} from "./meet-amanda.styles";
 
 import useWindowSize from "../../hooks/useWindowSize";
+import SectionHeading from "../section-heading/section-heading.component";
 
 const MeetAmanda = () => {
   const { width } = useWindowSize();
@@ -15,7 +20,7 @@ const MeetAmanda = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <>
+    <MeetAmandaContainer>
       <div
         className="flex justify-center pt-10"
         ref={ref}
@@ -25,15 +30,12 @@ const MeetAmanda = () => {
           transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.6s",
         }}
       >
-        <FramingExpertTitle className="framing-expert-title shadow-lg w-fit text-center">
-          <p className="text-black">Meet Amanda</p>
-          THE FRAMING EXPERT
-        </FramingExpertTitle>
+        <SectionHeading line1="Meet Amanda" line2="THE FRAMING EXPERT" />
       </div>
       <div
         className={`flex ${
           isMobile ? "flex-col" : "flex-row-reverse"
-        } m-10 mb-40`}
+        } m-10 mb-0`}
       >
         <div className={isMobile ? "flex justify-center" : "w-1/2"}>
           <FramedImage
@@ -78,7 +80,7 @@ const MeetAmanda = () => {
           </p>
         </div>
       </div>
-    </>
+    </MeetAmandaContainer>
   );
 };
 
