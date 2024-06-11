@@ -9,6 +9,7 @@ const defaultFormFields = {
 };
 const Contact = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
+  const { name, email, message } = formFields;
 
   const handleSubmit = () => {};
 
@@ -28,7 +29,7 @@ const Contact = () => {
             required
             onChange={handleChange}
             name="name"
-            //   value={name}
+            value={name}
           />
           <FormInput
             label="Email"
@@ -36,7 +37,7 @@ const Contact = () => {
             required
             onChange={handleChange}
             name="email"
-            // value={email}
+            value={email}
           />
           <FormInput
             label="Message"
@@ -44,7 +45,7 @@ const Contact = () => {
             required
             onChange={handleChange}
             name="message"
-            // value={message}
+            value={message}
           />
           <Button type="submit" onClick={handleSubmit}>
             Submit
