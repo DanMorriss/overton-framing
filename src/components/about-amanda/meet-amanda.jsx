@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { useInView } from "framer-motion";
 
 import amanda from "../../assets/images/amanda2.jpg";
-import { FramedImage } from "./meet-amanda.styles";
+import { FramedImage, FramingExpertTitle } from "./meet-amanda.styles";
 
 import useWindowSize from "../../hooks/useWindowSize";
 
@@ -16,17 +16,20 @@ const MeetAmanda = () => {
 
   return (
     <>
-      <h2
-        className="text-center text-3xl p-10"
+      <div
+        className="flex justify-center pt-10"
         ref={ref}
         style={{
           transform: isInView ? "none" : "translateY(-60px)",
           opacity: isInView ? 1 : 0,
-          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.6s",
         }}
       >
-        Meet Amanda, the framing expert
-      </h2>
+        <FramingExpertTitle className="framing-expert-title shadow-lg w-fit text-center">
+          <p className="text-black">Meet Amanda</p>
+          THE FRAMING EXPERT
+        </FramingExpertTitle>
+      </div>
       <div
         className={`flex ${
           isMobile ? "flex-col" : "flex-row-reverse"
@@ -54,21 +57,21 @@ const MeetAmanda = () => {
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
           }}
         >
-          <p className="mb-5">
+          <p className="mb-5 text-lg">
             Amanda is a distinguished frame maker based in Marlborough, bringing
             over 15 years of expertise to her craft. Her dedication to providing
             personalized service ensures that every customer receives meticulous
             attention, whether they need a single photo mounted or an entire
             exhibition framed.
           </p>
-          <p className="mb-5">
+          <p className="mb-5 text-lg">
             A true creative at heart, Amanda possesses a sharp eye for selecting
             the perfect frames, mounts, and colors to complement each piece of
             artwork and its intended display setting. She thrives on challenges,
             which has led her to frame a diverse array of unique and delicate
             items, including memory boxes and large, fragile ceramic sculptures.
           </p>
-          <p>
+          <p className="text-lg">
             Amanda&#39;s passion and pride in her work are evident in every
             project she undertakes, making her a trusted choice for anyone
             seeking exceptional framing services.

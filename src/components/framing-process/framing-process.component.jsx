@@ -37,23 +37,24 @@ const FramingProcess = () => {
 
   return (
     <FramingProcessContainer>
-      <p>
-        Work with our framing expert to bring your vision to life. Come to the
-        studio with your artwork and we'll go through all the options in detail
-        to make sure you get the perfect fit for your project.
-      </p>
+      <div className="text-2xl p-10">
+        <p>Work with our framing expert to bring your vision to life.</p>
+        <p>
+          Come to the studio with your artwork and go through all the options in
+          detail to make sure you get the perfect fit for you and your artwork.
+        </p>
+      </div>
       <VerticalTimeline lineColor={"#ec478c"}>
         {framingProcessSteps.map(({ title, content }, index) => (
           <VerticalTimelineElement
             key={index}
             className=""
             contentStyle={{
-              background: "",
-              color: "",
-              boxShadow:
-                "0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)",
+              background: "#ec4899",
+              color: "white",
+              boxShadow: "inset 0 0 0 12px #ec4899, inset 0 0 0 14px white",
             }}
-            contentArrowStyle={{ borderRight: "7px solid  #fff" }}
+            contentArrowStyle={{ borderRight: "7px solid  #ec4899" }}
             iconStyle={{
               background: "#01aaa9",
               color: "#fff",
