@@ -7,3 +7,7 @@ export const ContactContainer = styled.div`
   justify-content: center;
   background-color: #f9f9f9;
 `;
+
+export const Address = styled.div`
+  // font-size: 1.3rem;
+`;
