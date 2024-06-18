@@ -7,9 +7,6 @@ export const NavBar = () => {
 
   return (
     <nav className="flex justify-between items-center p-5 gap-3">
-      <a href="/" className="text-3xl">
-        Overton Framing Studio
-      </a>
       <section className="MOBILE-MENU flex lg:hidden">
         <div
           className="HAMBURGER-ICON space-y-2"
