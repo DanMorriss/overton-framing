@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 
 import { useInView } from "framer-motion";
 
-import Button from "../button/button.component";
+import PillButton from "../button/pill-button.component.jsx";
 import SectionHeading from "../section-heading/section-heading.component.jsx";
 import ContactForm from "../contact-form/contact-form.component.jsx";
 
@@ -43,20 +43,20 @@ const Contact = () => {
           </Address>
           <div className="w-fit p-3">
             <a href="tel:07880 810631">
-              <Button
+              <PillButton
                 buttonType="inverted"
                 className="mb-3"
                 style={{ width: "100%" }}
               >
                 <i className="fa-solid fa-phone pr-3 pt-4"></i>07880 810631
-              </Button>
+              </PillButton>
             </a>
 
             <a href="mailto:amanda@overtonframingstudio.co.uk">
-              <Button buttonType="inverted">
+              <PillButton buttonType="inverted">
                 <i className="fa-solid fa-envelope pr-3 pt-4"></i>
                 amanda@overtonframingstudio.co.uk
-              </Button>
+              </PillButton>
             </a>
           </div>
         </div>

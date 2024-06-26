@@ -1,41 +1,53 @@
 import styled from "styled-components";
 
-export const BaseButton = styled.button`
-  min-width: 165px;
-  width: auto;
-  height: 50px;
-  letter-spacing: 0.5px;
-  line-height: 50px;
-  padding: 0 35px 0 35px;
-  font-size: 15px;
+export const Button1 = styled.button`
+  border: none;
+  padding: 12px 40px;
   background-color: #01aaa9;
   color: white;
+  font-size: 22px;
   text-transform: uppercase;
-  font-family: "Rubik", sans-serif;
-  border: none;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  border-radius: 25px;
-  transition: all 0.4s ease-in-out;
-  box-shadow: inset 0 0 0 3px #01aaa9, inset 0 0 0 5px white;
+  position: relative;
+  box-shadow: inset 0 0 0 5px #01aaa9, inset 0 0 0 6px white;
+  border-radius: 2px;
+  transition: all 0.3s;
 
   &:hover {
-    background-color: white;
-    color: #01aaa9;
-    border: 1px solid #01aaa9;
-    transition: all 0.2s ease-in-out;
+    box-shadow: inset 0 0 0 6px #01aaa9, inset 0 0 0 7px white;
   }
-`;
 
-export const InvertedButton = styled(BaseButton)`
-  background-color: white;
-  color: #01aaa9;
-  border: 1px solid #01aaa9;
+  &:active {
+    background-color: #01aaaaa4;
+  }
 
-  &:hover {
-    background-color: #01aaa9;
-    color: white;
-    border: none;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: -5px;
+    left: -5px;
+    border-top: 2px solid #01aaa9;
+    border-left: 2px solid #01aaa9;
+    transition: all 0.25s;
+  }
+
+  &:hover:before,
+  &:hover:after {
+    height: 100%;
+    width: 100%;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    bottom: -5px;
+    right: -5px;
+    border-bottom: 2px solid #01aaa9;
+    border-right: 2px solid #01aaa9;
+    transition: all 0.25s;
   }
 `;
