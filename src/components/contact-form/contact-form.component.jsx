@@ -14,9 +14,12 @@ const ContactForm = () => {
   const form = useRef();
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { name, email, message } = formFields;
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [feedbackMessage, setFeedbackMessage] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setIsSubmitted(true);
 
     emailjs
       .sendForm(
@@ -28,12 +31,17 @@ const ContactForm = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setFeedbackMessage("Thank you for your message!");
+          setFormFields(defaultFormFields);
         },
         (error) => {
           console.log(error.text);
+          setFeedbackMessage("Oops! Something went wrong. Please try again.");
         }
       )
-      .then();
+      .finally(() => {
+        setIsSubmitted(false);
+      });
   };
 
   const handleChange = (event) => {
@@ -41,7 +49,8 @@ const ContactForm = () => {
     setFormFields({ ...formFields, [name]: value });
   };
   return (
-    <form ref={form}>
+    <form ref={form} onSubmit={handleSubmit}>
+      {feedbackMessage && <p>{feedbackMessage}</p>}
       <FormInput
         label="Name"
         type="text"
@@ -68,8 +77,8 @@ const ContactForm = () => {
         value={message}
         className="message-input"
       />
-      <Button type="submit" onClick={handleSubmit}>
-        Submit
+      <Button type="submit" disabled={isSubmitted}>
+        {isSubmitted ? "Sending..." : "Submit"}
       </Button>
     </form>
   );
