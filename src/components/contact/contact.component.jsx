@@ -5,12 +5,16 @@ import { useInView } from "framer-motion";
 import PillButton from "../button/pill-button.component.jsx";
 import SectionHeading from "../section-heading/section-heading.component.jsx";
 import ContactForm from "../contact-form/contact-form.component.jsx";
+import useWindowSize from "../../hooks/useWindowSize.jsx";
 
 import { ContactContainer, Address } from "./contact.styles.jsx";
 
 const Contact = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+
+  const { width } = useWindowSize();
+  const isMobile = width < 768;
 
   return (
     <ContactContainer>
@@ -24,7 +28,14 @@ const Contact = () => {
       >
         <SectionHeading line1="Get in touch" line2="BOOK A FREE CONSULTATION" />
       </div>
-      <div className="grid grid-cols-2 gap-4 w-full p-10 text-left text-xl">
+
+      <div
+        className={
+          isMobile
+            ? "flex flex-col-reverse"
+            : "grid grid-cols-2 gap-4 w-full p-10 text-left text-xl"
+        }
+      >
         <div
           className="w-full flex flex-col justify-center ml-auto"
           ref={ref}
@@ -34,7 +45,7 @@ const Contact = () => {
             transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.6s",
           }}
         >
-          <Address className="p-3 ml-8">
+          <Address className={isMobile ? "p-3 pt-7" : "p-3 ml-8"}>
             <p>Unit 2</p>
             <p>Elmtree Industrial Park</p>
             <p>Manton</p>
@@ -60,6 +71,8 @@ const Contact = () => {
             </a>
           </div>
         </div>
+
+        {/* FORM */}
         <div
           ref={ref}
           style={{

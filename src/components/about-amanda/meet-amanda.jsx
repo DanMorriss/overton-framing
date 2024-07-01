@@ -51,7 +51,9 @@ const MeetAmanda = () => {
           />
         </div>
         <div
-          className={`${isMobile ? "w-full p-10" : "w-1/2 pr-10"} text-justify`}
+          className={`${
+            isMobile ? "w-full p-3 pt-10" : "w-1/2 pr-10"
+          } text-justify`}
           ref={ref}
           style={{
             transform: isInView ? "none" : "translateX(-200px)",

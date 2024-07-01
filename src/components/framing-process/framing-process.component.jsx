@@ -41,7 +41,10 @@ const FramingProcess = () => {
   return (
     <FramingProcessContainer>
       <FramingProcessDescription className="text-2xl p-10">
-        <p>Work with our framing expert to bring your vision to life.</p>
+        <p>
+          Work with our <span>framing expert</span> to bring your vision to
+          life.
+        </p>
         <p>
           Come to the studio with your artwork and go through all the options in
           detail to make sure you get the perfect fit for you and your artwork.
