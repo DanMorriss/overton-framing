@@ -1,30 +1,18 @@
-import { motion } from "framer-motion";
 import Button from "../button/button.component";
-import frame from "../../assets/images/frame1.png";
-import frame2 from "../../assets/images/frame2.png";
 
-import {
-  HeroContainer,
-  RightFrame,
-  OvertonFramingTitleSign,
-} from "./hero.styles";
+import frame1 from "../../assets/images/frames/frame1.png";
+
+import { HeroContainer, OvertonFramingTitleSign } from "./hero.styles";
 
 const Hero = () => {
   return (
     <HeroContainer className="h-screen">
-      {/* <RightFrame
-        src={frame2}
-        alt="Frame"
-        width="500"
-        height="1080"
-        className="absolute slide-in-tr shadow-xl"
-      /> */}
       <img
-        src={frame}
+        src={frame1}
         alt="Frame"
         width="500"
         height="1080"
-        className="absolute slide-in-bck-tl shadow-xl"
+        className="absolute slide-in-bck-tl"
       />
 
       <div className="mt-0 flex flex-col justify-center content-center text-center p-8 tracking-in-expand">

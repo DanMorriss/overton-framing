@@ -6,7 +6,6 @@ export const FramingProcessContainer = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #f9f9f9;
-  padding-bottom: 3rem;
 `;
 
 export const FramingProcessDescription = styled.div`
