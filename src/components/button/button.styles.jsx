@@ -21,6 +21,16 @@ export const Button1 = styled.button`
     background-color: #01aaaaa4;
   }
 
+  &:focus {
+    background-color: #01aaaaa4;
+
+    &:before,
+    &:after {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
   &:before {
     content: "";
     position: absolute;
