@@ -32,5 +32,6 @@
   object-fit: cover;
   width: 100%;
   max-width: 500px;
+  transition: all 0.3s;
 }
 

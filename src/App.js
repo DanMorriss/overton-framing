@@ -7,6 +7,8 @@ import Examples from "./components/examples/examples.component";
 import Contact from "./components/contact/contact.component";
 import NavBar from "./components/navbar/navbar.component";
 
+import { Element } from "react-scroll";
+
 function App() {
   return (
     <div className="App">
@@ -16,7 +18,9 @@ function App() {
       <FramingProcess />
       <Testimonials />
       <Examples />
-      <Contact />
+      <Element name="contact" className="element">
+        <Contact />
+      </Element>
     </div>
   );
 }

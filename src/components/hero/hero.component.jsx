@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import Button from "../button/button.component";
 
 import frame1 from "../../assets/images/frames/frame1.png";
@@ -24,9 +25,18 @@ const Hero = () => {
             Bespoke framing with over 15 years experience
           </h2>
         </OvertonFramingTitleSign>
-        <Button className="place-self-center mt-10">
-          Book a free consultation
-        </Button>
+        <Link
+          activeClass="active"
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={1000}
+        >
+          <Button className="place-self-center mt-10">
+            Book a free consultation
+          </Button>
+        </Link>
       </div>
     </HeroContainer>
   );
