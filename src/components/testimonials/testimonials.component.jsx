@@ -18,11 +18,11 @@ const Testimonials = () => {
         <div className="testimonial-avatar drop-shadow-lg">NH</div>
         <p className="font-bold mb-1 text-right">Nigel Hudson</p>
         <p className="text-right text-yellow-300 pb-2">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
+          <i className="fa-solid fa-star"></i>
+          <i className="fa-solid fa-star"></i>
+          <i className="fa-solid fa-star"></i>
+          <i className="fa-solid fa-star"></i>
+          <i className="fa-solid fa-star"></i>
         </p>
         {isMobile ? (
           <p className="text-justify">
@@ -46,11 +46,11 @@ const Testimonials = () => {
         <div className="testimonial-avatar drop-shadow-lg">DN</div>
         <p className="font-bold mb-1 text-right">Diana Neale</p>
         <p className="text-right text-yellow-300 pb-2">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
+          <i className="fa-solid fa-star"></i>
+          <i className="fa-solid fa-star"></i>
+          <i className="fa-solid fa-star"></i>
+          <i className="fa-solid fa-star"></i>
+          <i className="fa-solid fa-star"></i>
         </p>
         {isMobile ? (
           <p className="text-justify">
@@ -73,11 +73,11 @@ const Testimonials = () => {
         <div className="testimonial-avatar drop-shadow-lg">DM</div>
         <p className="font-bold mb-1 text-right">Dan Myddleton</p>
         <p className="text-right text-yellow-300 pb-2">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
+          <i className="fa-solid fa-star"></i>
+          <i className="fa-solid fa-star"></i>
+          <i className="fa-solid fa-star"></i>
+          <i className="fa-solid fa-star"></i>
+          <i className="fa-solid fa-star"></i>
         </p>
         {isMobile ? (
           <p className="text-justify">
